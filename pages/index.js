@@ -1,5 +1,6 @@
 import styles from "../styles/Home.module.css";
 import PageLayout from "../components/PageLayout";
+import Image from "next/image";
 
 export default function Home({ articles }) {
   return (
@@ -10,7 +11,7 @@ export default function Home({ articles }) {
           articles.map((article, index) => {
             return (
               <article key={index}>
-                <img src={article.urlToImage} alt='ima ge'></img>
+                <Image src={article.urlToImage} alt='image' width={450} height={300} layout='responsive'></Image>
                 <h2>{article.title} </h2>
                 <p>{article.description}</p>
               </article>
