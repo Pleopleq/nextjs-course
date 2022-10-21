@@ -10,7 +10,7 @@ export default function Home({ articles }) {
           articles.map((article, index) => {
             return (
               <article key={index}>
-                <img src={article.urlToImage} alt='image'></img>
+                <img src={article.urlToImage} alt='ima ge'></img>
                 <h2>{article.title} </h2>
                 <p>{article.description}</p>
               </article>
