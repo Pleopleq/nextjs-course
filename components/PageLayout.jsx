@@ -1,18 +1,28 @@
-import Head from "next/head"
+import Head from "next/head";
+import Link from "next/link";
+import styles from "../styles/PageLayout.module.css";
+
 
 export default function PageLayout({ children, title }) {
     return (
         <>
             <Head>
-                <title>{title ? title : 'NewsApp'}</title>
-                <meta name="description" content="NewsApp - the best app to read news." />
-                <link rel="icon" href="/favicon.ico" />
+                <title>{title ? title : "NewsApp"}</title>
+                <meta
+                    name='description'
+                    content='NewsApp - the best app to read news.'
+                />
+                <link rel='icon' href='/favicon.ico' />
             </Head>
-            <main>
-                {children}
-            </main>
+            <header className={styles.navbar} >
+                <div>
+                    <Link href='/'> 📰 NewsApp</Link>
+                </div>
+                <div>
+                    <Link href='/about'>About</Link>
+                </div>
+            </header>
+            <main>{children}</main>
         </>
-    )
+    );
 }
-
-//9ba6a305cfab4ae4b8adcad5a10b3ae3
